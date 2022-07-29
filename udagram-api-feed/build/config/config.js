@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.config = void 0;
 // export const config = {
 //   'username': process.env.POSTGRES_USERNAME,
 //   'password': process.env.POSTGRES_PASSWORD,
@@ -15,13 +13,30 @@ exports.config = void 0;
 //     'secret': process.env.JWT_SECRET,
 //   },
 // };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.config = void 0;
+// export const config = {
+//   'dialect': 'postgres',
+//   'port': 5432,
+//   'username': 'postgres',
+//   'password': '123456',
+//   'database': 'udacity',
+//   'host': '192.168.68.109',
+//   'aws_region': 'us-east-1',
+//   'aws_profile': 'udacity_learning_3_ok',
+//   'aws_media_bucket': 'project3trungnd10',
+//   'url': 'http://localhost:8100',
+//   'jwt': {
+//     'secret': 'trung30220',
+//   },
+// };
 exports.config = {
     'dialect': 'postgres',
     'port': 5432,
     'username': 'postgres',
-    'password': '123456',
+    'password': '12345678',
     'database': 'udacity',
-    'host': '192.168.68.109',
+    'host': 'udacity2.cezq6sexuctn.us-east-1.rds.amazonaws.com',
     'aws_region': 'us-east-1',
     'aws_profile': 'udacity_learning_3_ok',
     'aws_media_bucket': 'project3trungnd10',

@@ -1,5 +1,10 @@
 # kubectl delete deployment --all
 # kubectl delete service --all
+
+kubectl apply -f aws-secret.yaml
+kubectl apply -f env-secret.yaml
+kubectl apply -f env-configmap.yaml
+
 kubectl delete deployment backend-feed
 kubectl delete deployment backend-user
 kubectl delete deployment frontend
@@ -8,6 +13,7 @@ kubectl delete service backend-feed
 kubectl delete service backend-user
 kubectl delete service frontend
 kubectl delete service reverseproxy
+kubectl delete service publicfrontend
 kubectl apply -f backend-feed-deployment.yaml
 kubectl apply -f backend-user-deployment.yaml
 kubectl apply -f frontend-deployment.yaml

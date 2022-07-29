@@ -1,13 +1,12 @@
-kind: ConfigMap
 apiVersion: v1
-metadata:
-  name: example-configmap
+kind: ConfigMap
 data:
-  # Configuration values can be set as key-value properties
-  database: mongodb
-  database_uri: mongodb://localhost:27017
-
-  # Or set as complete file contents (even JSON!)
-  keys: |
-    image.public.key=771 
-    rsa.public.key=42
+  AWS_BUCKET: project3trungnd10
+  # AWS_PROFILE: udacity_learning_3_ok
+  AWS_REGION: us-east-2
+  JWT_SECRET: trungnd10
+  POSTGRESS_DB: udacity
+  POSTGRESS_HOST: udacity2.cezq6sexuctn.us-east-1.rds.amazonaws.com
+  URL: http://localhost:8100  
+metadata:
+  name: env-config

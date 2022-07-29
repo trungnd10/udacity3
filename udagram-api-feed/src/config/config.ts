@@ -1,46 +1,14 @@
-// export const config = {
-//   'username': process.env.POSTGRES_USERNAME,
-//   'password': process.env.POSTGRES_PASSWORD,
-//   'database': process.env.POSTGRES_DB,
-//   'host': process.env.POSTGRES_HOST,
-//   'dialect': 'postgres',
-//   'aws_region': process.env.AWS_REGION,
-//   'aws_profile': process.env.AWS_PROFILE,
-//   'aws_media_bucket': process.env.AWS_BUCKET,
-//   'url': process.env.URL,
-//   'jwt': {
-//     'secret': process.env.JWT_SECRET,
-//   },
-// };
-
-// export const config = {
-//   'dialect': 'postgres',
-//   'port': 5432,
-//   'username': 'postgres',
-//   'password': '123456',
-//   'database': 'udacity',
-//   'host': '192.168.68.109',
-//   'aws_region': 'us-east-1',
-//   'aws_profile': 'udacity_learning_3_ok',
-//   'aws_media_bucket': 'project3trungnd10',
-//   'url': 'http://localhost:8100',
-//   'jwt': {
-//     'secret': 'trung30220',
-//   },
-// };
-
 export const config = {
+  'username': process.env.POSTGRES_USERNAME,
+  'password': process.env.POSTGRES_PASSWORD,
+  'database': process.env.POSTGRES_DB,
+  'host': process.env.POSTGRES_HOST,
   'dialect': 'postgres',
-  'port': 5432,
-  'username': 'postgres',
-  'password': '12345678',
-  'database': 'udacity',
-  'host': 'udacity2.cezq6sexuctn.us-east-1.rds.amazonaws.com',
-  'aws_region': 'us-east-1',
-  'aws_profile': 'udacity_learning_3_ok',
-  'aws_media_bucket': 'project3trungnd10',
-  'url': 'http://localhost:8100',
+  'aws_region': process.env.AWS_REGION,
+  'aws_profile': process.env.AWS_PROFILE,
+  'aws_media_bucket': process.env.AWS_BUCKET,
+  'url': process.env.URL,
   'jwt': {
-    'secret': 'trung30220',
+    'secret': process.env.JWT_SECRET,
   },
 };
