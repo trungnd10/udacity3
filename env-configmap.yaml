@@ -2,8 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 data:
   AWS_BUCKET: project3trungnd10
-  AWS_PROFILE: udacity_learning_3_ok
-  # AWS_PROFILE: udacity
+  # AWS_PROFILE: udacity_learning_3_ok
+  AWS_PROFILE: udacity
   AWS_DEFAULT_REGION: us-east-2
   AWS_REGION: us-east-2
   JWT_SECRET: trungnd10
