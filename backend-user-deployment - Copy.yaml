@@ -1,24 +1,28 @@
+# apiVersion: extensions/v1beta1
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-user
   labels:
-    app: backend-user
+    service: backend-user
+  name: backend-user
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: backend-user
+  replicas: 2
   template:
     metadata:
       labels:
-        app: backend-user
+        service: backend-user
     spec:
       containers:
-      - name: backend-user
-        image: trung30220/udagram-api-user:latest
-        ports:
-        - containerPort: 8080
+      - image: trung30220/udagram-api-user:latest
+        name: backend-user 
+        imagePullPolicy: Always  
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"      
         env:
         - name: URL
           valueFrom:
@@ -30,23 +34,24 @@ spec:
             configMapKeyRef:
               name: env-config
               key: JWT_SECRET
-        - name: POSTGRES_DB
+        - name: POSTGRESS_DB
           valueFrom:
             configMapKeyRef:
               name: env-config
-              key: POSTGRES_DB
-        - name: POSTGRES_HOST
+              key: POSTGRESS_DB
+        - name: POSTGRESS_HOST
           valueFrom:
             configMapKeyRef:
               name: env-config
-              key: POSTGRES_HOST
-        - name: POSTGRES_PASSWORD
+              key: POSTGRESS_HOST
+        - name: POSTGRESS_PASSWORD
           valueFrom:
             secretKeyRef:
               name: env-secret
-              key: POSTGRES_PASSWORD
-        - name: POSTGRES_USERNAME
+              key: POSTGRESS_PASSWORD
+        - name: POSTGRESS_USERNAME
           valueFrom:
             secretKeyRef:
               name: env-secret
-              key: POSTGRES_USERNAME
+              key: POSTGRESS_USERNAME
+      restartPolicy: Always

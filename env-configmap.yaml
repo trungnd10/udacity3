@@ -3,10 +3,12 @@ kind: ConfigMap
 data:
   AWS_BUCKET: project3trungnd10
   # AWS_PROFILE: udacity_learning_3_ok
+  AWS_PROFILE: udacity
+  AWS_DEFAULT_REGION: us-east-2
   AWS_REGION: us-east-2
   JWT_SECRET: trungnd10
-  POSTGRESS_DB: udacity
-  POSTGRESS_HOST: udacity2.cezq6sexuctn.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: udacity
+  POSTGRES_HOST: udacity2.cezq6sexuctn.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100  
 metadata:
   name: env-config
